@@ -31,6 +31,223 @@
   * { box-sizing: border-box; }
   input::placeholder { color: #9AA3B2; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .55; } }
+
+  /* ===== MOBILE RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    /* -- TOP BAR -- */
+    [data-nav-links] > a:not([data-nav-cta]) { display: none !important; }
+    [data-topbar-inner] { padding: 12px 16px !important; }
+
+    /* -- HERO -- */
+    [data-hero] {
+      grid-template-columns: 1fr !important;
+      padding: 40px 16px 36px !important;
+      gap: 32px !important;
+    }
+    [data-hero] h1 {
+      font-size: 32px !important;
+      line-height: 1.15 !important;
+    }
+    [data-hero] p {
+      font-size: 16px !important;
+    }
+    [data-hero-cta] {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 10px !important;
+    }
+    [data-hero-cta] a {
+      text-align: center !important;
+      padding: 14px 24px !important;
+      font-size: 16px !important;
+    }
+    [data-hero-image] {
+      order: -1 !important;
+      max-width: 280px !important;
+      margin: 0 auto !important;
+    }
+    [data-payout-badge] {
+      left: 4px !important;
+      bottom: 12px !important;
+      padding: 10px 14px !important;
+    }
+
+    /* -- PAIN POINTS -- */
+    [data-pains] {
+      padding: 48px 16px !important;
+    }
+    [data-pains] h2 {
+      font-size: 26px !important;
+    }
+    [data-pains-grid] {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+
+    /* -- CURRICULUM -- */
+    [data-curriculum] {
+      padding: 56px 16px !important;
+    }
+    [data-curriculum] h2 {
+      font-size: 26px !important;
+    }
+    [data-curriculum-grid] {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    /* -- CLASS PHOTOS -- */
+    [data-photos] {
+      padding: 0 16px 56px !important;
+    }
+    [data-photos] h2 {
+      font-size: 26px !important;
+    }
+    [data-photos-grid] {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    /* -- SOCIAL PROOF -- */
+    [data-proof] {
+      padding: 56px 16px !important;
+    }
+    [data-proof] h2 {
+      font-size: 26px !important;
+    }
+    [data-proof-grid] {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    /* -- FEEDBACK -- */
+    [data-feedback] {
+      padding: 56px 16px !important;
+    }
+    [data-feedback] h2 {
+      font-size: 26px !important;
+    }
+    [data-feedback-grid] {
+      grid-template-columns: 1fr !important;
+      gap: 14px !important;
+    }
+
+    /* -- INSTRUCTOR -- */
+    [data-instructor] {
+      grid-template-columns: 1fr !important;
+      padding: 56px 16px !important;
+      gap: 32px !important;
+    }
+    [data-instructor] h2 {
+      font-size: 26px !important;
+    }
+    [data-instructor-img] {
+      max-width: 260px !important;
+      margin: 0 auto !important;
+    }
+
+    /* -- PRICING -- */
+    [data-pricing] {
+      grid-template-columns: 1fr !important;
+      padding: 56px 16px !important;
+      gap: 32px !important;
+    }
+    [data-pricing] h2 {
+      font-size: 26px !important;
+    }
+    [data-price-amount] {
+      font-size: 36px !important;
+    }
+    [data-countdown-boxes] {
+      gap: 6px !important;
+    }
+    [data-countdown-boxes] > div {
+      width: auto !important;
+      flex: 1 !important;
+      min-width: 0 !important;
+      padding: 10px 0 !important;
+    }
+    [data-countdown-boxes] > div > div:first-child {
+      font-size: 22px !important;
+    }
+    [data-qr-section] {
+      padding: 18px !important;
+    }
+    [data-qr-section] img {
+      width: 180px !important;
+    }
+    [data-bank-info] {
+      max-width: 100% !important;
+    }
+    [data-bank-info] > div {
+      flex-direction: column !important;
+      gap: 2px !important;
+    }
+
+    /* -- FORM -- */
+    [data-form] {
+      padding: 24px 20px !important;
+      border-radius: 16px !important;
+    }
+    [data-form] button {
+      font-size: 16px !important;
+      padding: 14px !important;
+    }
+
+    /* -- FAQ -- */
+    [data-faq] {
+      padding: 56px 16px !important;
+    }
+    [data-faq] h2 {
+      font-size: 26px !important;
+    }
+    [data-faq] button {
+      padding: 16px 18px !important;
+      font-size: 15px !important;
+    }
+
+    /* -- FOOTER -- */
+    [data-footer] {
+      flex-direction: column !important;
+      text-align: center !important;
+      gap: 10px !important;
+      padding: 24px 16px !important;
+    }
+  }
+
+  /* ===== TABLET (769px - 1024px) ===== */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    [data-hero] {
+      grid-template-columns: 1fr !important;
+      padding: 56px 24px 40px !important;
+      gap: 36px !important;
+    }
+    [data-hero] h1 {
+      font-size: 40px !important;
+    }
+    [data-hero-image] {
+      order: -1 !important;
+      max-width: 320px !important;
+      margin: 0 auto !important;
+    }
+    [data-curriculum-grid] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    [data-proof-grid] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    [data-feedback-grid] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    [data-instructor] {
+      grid-template-columns: 1fr 1fr !important;
+      gap: 36px !important;
+    }
+    [data-pricing] {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+  }
 </style>
 </helmet>
 
@@ -38,22 +255,22 @@
 
   <!-- ============ TOP BAR ============ -->
   <div style="position: sticky; top: 0; z-index: 50; background: rgba(250,250,247,.92); backdrop-filter: blur(10px); border-bottom: 1px solid #E8E7E0;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+    <div data-topbar-inner style="max-width: 1100px; margin: 0 auto; padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <div style="width: 34px; height: 34px; border-radius: 9px; background: #17233A; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px;">A</div>
         <div style="font-weight: 700; font-size: 16px; letter-spacing: -0.01em;">AI Affiliate</div>
       </div>
-      <div style="display: flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 500;">
+      <div data-nav-links style="display: flex; align-items: center; gap: 22px; font-size: 14px; font-weight: 500;">
         <a href="#lo-trinh" style="color: #4B5568;">Lộ trình</a>
         <a href="#bang-chung" style="color: #4B5568;">Kết quả</a>
         <a href="#hoc-phi" style="color: #4B5568;">Học phí</a>
-        <a href="#dang-ky" style="background: #1E5FC9; color: #fff; padding: 10px 20px; border-radius: 10px; font-weight: 600;" style-hover="background: #16498F; color: #fff;">Đăng ký ngay</a>
+        <a data-nav-cta href="#dang-ky" style="background: #1E5FC9; color: #fff; padding: 10px 20px; border-radius: 10px; font-weight: 600;" style-hover="background: #16498F; color: #fff;">Đăng ký ngay</a>
       </div>
     </div>
   </div>
 
   <!-- ============ HERO ============ -->
-  <div style="max-width: 1100px; margin: 0 auto; padding: 72px 24px 56px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;">
+  <div data-hero style="max-width: 1100px; margin: 0 auto; padding: 72px 24px 56px; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;">
     <div>
       <div style="display: inline-flex; align-items: center; gap: 8px; background: #EAF1FC; color: #1E5FC9; font-size: 13px; font-weight: 600; padding: 7px 14px; border-radius: 999px; margin-bottom: 22px;">
         <span style="width: 7px; height: 7px; border-radius: 50%; background: #1E5FC9; animation: pulse 2s infinite;"></span>
@@ -65,17 +282,17 @@
       <p style="margin: 0 0 28px; font-size: 18px; line-height: 1.65; color: #4B5568; max-width: 520px; text-wrap: pretty;">
         Học cách dùng AI tạo video tự động, xây kênh và tạo thu nhập affiliate — kể cả khi bạn chưa từng làm nội dung hay không xuất hiện trước ống kính.
       </p>
-      <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+      <div data-hero-cta style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
         <a href="#dang-ky" style="background: #1E5FC9; color: #fff; padding: 16px 32px; border-radius: 12px; font-weight: 700; font-size: 17px; box-shadow: 0 8px 24px rgba(30,95,201,.28);" style-hover="background: #16498F; color: #fff;">Giữ chỗ với 990.000đ</a>
         <div style="font-size: 14px; color: #77808F;">Học phí gốc <span style="text-decoration: line-through;">4.950.000đ</span></div>
       </div>
       
     </div>
     <div style="display: flex; justify-content: center;">
-      <div style="position: relative; width: 100%; max-width: 380px;">
+      <div data-hero-image style="position: relative; width: 100%; max-width: 380px;">
         <div style="position: absolute; inset: 40px -16px -16px 16px; background: #EAF1FC; border-radius: 24px;"></div>
         <img src="uploads/logo-1783561016653.png" alt="Giảng viên" style="position: relative; width: 100%; display: block; filter: drop-shadow(0 16px 32px rgba(23,35,58,.18));">
-        <div style="position: absolute; left: -8px; bottom: 24px; background: #fff; border: 1px solid #E8E7E0; border-radius: 14px; padding: 12px 18px; box-shadow: 0 12px 28px rgba(23,35,58,.12);">
+        <div data-payout-badge style="position: absolute; left: -8px; bottom: 24px; background: #fff; border: 1px solid #E8E7E0; border-radius: 14px; padding: 12px 18px; box-shadow: 0 12px 28px rgba(23,35,58,.12);">
           <div style="font-size: 12px; color: #77808F;">Payout đã nhận · 01/07/2026</div>
           <div style="font-size: 18px; font-weight: 800; color: #0E7C4A;">+56.628.360 VND</div>
         </div>
@@ -85,10 +302,10 @@
 
   <!-- ============ PAIN POINTS ============ -->
   <div style="background: #17233A; color: #fff;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 72px 24px;">
+    <div data-pains style="max-width: 1100px; margin: 0 auto; padding: 72px 24px;">
       <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8FB4EE; margin-bottom: 12px;">Khóa học này dành cho ai</div>
       <h2 style="margin: 0 0 40px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; max-width: 640px; text-wrap: pretty;">Bạn thấy mình trong những tình huống này?</h2>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
+      <div data-pains-grid style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
         <sc-for list="{{ pains }}" as="p" hint-placeholder-count="4">
           <div style="background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 26px 28px;">
             <div style="font-size: 17px; font-weight: 700; margin-bottom: 8px;">{{ p.title }}</div>
@@ -103,10 +320,10 @@
   </div>
 
   <!-- ============ CURRICULUM ============ -->
-  <div id="lo-trinh" style="max-width: 1100px; margin: 0 auto; padding: 80px 24px;">
+  <div id="lo-trinh" data-curriculum style="max-width: 1100px; margin: 0 auto; padding: 80px 24px;">
     <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1E5FC9; margin-bottom: 12px;">Lộ trình 3 buổi</div>
     <h2 style="margin: 0 0 40px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; text-wrap: pretty;">Từ số 0 đến kênh AI tạo thu nhập</h2>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+    <div data-curriculum-grid style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
       <sc-for list="{{ sessions }}" as="s" hint-placeholder-count="3">
         <div style="background: #fff; border: 1px solid #E8E7E0; border-radius: 18px; padding: 30px 28px; display: flex; flex-direction: column; gap: 14px;">
           <div style="width: 44px; height: 44px; border-radius: 12px; background: #EAF1FC; color: #1E5FC9; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px;">{{ s.num }}</div>
@@ -119,11 +336,11 @@
   </div>
 
   <!-- ============ CLASS PHOTOS ============ -->
-  <div id="buoi-hoc" style="max-width: 1100px; margin: 0 auto; padding: 0 24px 80px;">
+  <div id="buoi-hoc" data-photos style="max-width: 1100px; margin: 0 auto; padding: 0 24px 80px;">
     <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1E5FC9; margin-bottom: 12px;">Hình ảnh buổi học</div>
     <h2 style="margin: 0 0 14px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; text-wrap: pretty;">Lớp học thật — thực hành thật</h2>
     <p style="margin: 0 0 36px; font-size: 16px; color: #4B5568; max-width: 620px; line-height: 1.65;">Học trực tiếp qua Zoom cùng thầy Trung, thực hành ngay trên công cụ AI trong từng buổi học.</p>
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
+    <div data-photos-grid style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
       <div style="background: #fff; border: 1px solid #E8E7E0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(23,35,58,.07);">
         <img src="uploads/pasted-1783561892607-0.png" alt="Lớp học Zoom đông học viên" style="width: 100%; display: block;">
         <div style="padding: 12px 18px; font-size: 13px; color: #77808F; border-top: 1px solid #E8E7E0;">Lớp học trực tiếp qua Zoom — học viên tương tác cùng giảng viên</div>
@@ -145,10 +362,10 @@
 
   <!-- ============ SOCIAL PROOF ============ -->
   <div id="bang-chung" style="background: #F1F3EE; border-top: 1px solid #E8E7E0; border-bottom: 1px solid #E8E7E0;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 80px 24px;">
+    <div data-proof style="max-width: 1100px; margin: 0 auto; padding: 80px 24px;">
       <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #0E7C4A; margin-bottom: 12px;">Bằng chứng thu nhập thật</div>
       <h2 style="margin: 0 0 40px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; text-wrap: pretty;">Tiền về tài khoản — không phải lời hứa</h2>
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start;">
+      <div data-proof-grid style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: start;">
         <div style="background: #fff; border: 1px solid #E8E7E0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(23,35,58,.07);">
           <img src="uploads/pasted-1783560719752-0.png" alt="Giao dịch 56.628.360 VND" style="width: 100%; display: block;">
           <div style="padding: 14px 18px; border-top: 1px solid #E8E7E0;">
@@ -181,11 +398,11 @@
   </div>
 
   <!-- ============ FEEDBACK ============ -->
-  <div id="feedback" style="max-width: 1100px; margin: 0 auto; padding: 80px 24px;">
+  <div id="feedback" data-feedback style="max-width: 1100px; margin: 0 auto; padding: 80px 24px;">
     <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #0E7C4A; margin-bottom: 12px;">Feedback học viên</div>
     <h2 style="margin: 0 0 14px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; text-wrap: pretty;">Học viên nói gì sau buổi học?</h2>
     <p style="margin: 0 0 36px; font-size: 16px; color: #4B5568; max-width: 620px; line-height: 1.65;">Phản hồi thật từ học viên — ngay trong lớp Zoom và trên Facebook sau mỗi buổi học.</p>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; margin-bottom: 18px;">
+    <div data-feedback-grid style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; margin-bottom: 18px;">
       <div style="background: #fff; border: 1px solid #E8E7E0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(23,35,58,.07);">
         <img src="uploads/pasted-1783561837182-0.png" alt="Feedback Facebook học viên" style="width: 100%; display: block;">
       </div>
@@ -196,7 +413,7 @@
         <img src="uploads/pasted-1783561873382-0.png" alt="Feedback Facebook học viên" style="width: 100%; display: block;">
       </div>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start;">
+    <div data-feedback-grid style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start;">
       <div style="background: #fff; border: 1px solid #E8E7E0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 24px rgba(23,35,58,.07);">
         <img src="uploads/pasted-1783561737546-0.png" alt="Học viên cảm ơn trong lớp Zoom" style="width: 100%; display: block;">
         <div style="padding: 12px 18px; font-size: 13px; color: #77808F; border-top: 1px solid #E8E7E0;">"Cảm ơn thầy Trung Caha rất nhiều, buổi học rất hay"</div>
@@ -213,8 +430,8 @@
   </div>
 
   <!-- ============ INSTRUCTOR ============ -->
-  <div style="max-width: 1100px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center;">
-    <div style="position: relative;">
+  <div data-instructor style="max-width: 1100px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 56px; align-items: center;">
+    <div data-instructor-img style="position: relative;">
       <div style="position: absolute; inset: 32px -14px -14px 14px; background: #F1F3EE; border-radius: 24px;"></div>
       <img src="uploads/logo-1783561016653.png" alt="Giảng viên" style="position: relative; width: 100%; display: block;">
     </div>
@@ -235,19 +452,19 @@
 
   <!-- ============ PRICING + COUNTDOWN + FORM ============ -->
   <div id="hoc-phi" style="background: #17233A;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;">
+    <div data-pricing style="max-width: 1100px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;">
       <div style="color: #fff;">
         <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8FB4EE; margin-bottom: 12px;">Học phí ưu đãi</div>
         <h2 style="margin: 0 0 20px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; text-wrap: pretty;">3 buổi Zoom Trực Tiếp + toàn bộ bonus</h2>
         <div style="display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px;">
-          <div style="font-size: 48px; font-weight: 900; letter-spacing: -0.03em;">990.000đ</div>
+          <div data-price-amount style="font-size: 48px; font-weight: 900; letter-spacing: -0.03em;">990.000đ</div>
           <div style="font-size: 20px; color: #7C879C; text-decoration: line-through;">4.950.000đ</div>
           <div style="background: #0E7C4A; color: #fff; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px;">-80%</div>
         </div>
         <sc-if value="{{ showCountdown }}" hint-placeholder-val="{{ true }}">
           <div style="margin: 24px 0 28px;">
             <div style="font-size: 13px; color: #B9C2D4; margin-bottom: 10px;">Ưu đãi kết thúc sau</div>
-            <div style="display: flex; gap: 10px;">
+            <div data-countdown-boxes style="display: flex; gap: 10px;">
               <div style="background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 12px 0; width: 72px; text-align: center;">
                 <div style="font-size: 26px; font-weight: 800;">{{ cdD }}</div>
                 <div style="font-size: 11px; color: #7C879C; margin-top: 2px;">NGÀY</div>
@@ -276,10 +493,10 @@
             </div>
           </sc-for>
         </div>
-        <div style="margin-top: 28px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 24px; text-align: center;">
+        <div data-qr-section style="margin-top: 28px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 24px; text-align: center;">
           <div style="font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 14px;">💳 Chuyển khoản giữ chỗ</div>
           <img src="https://img.vietqr.io/image/MSB-03001017825423-compact2.png?amount=990000&amp;addInfo=AI%20AFFILIATE&amp;accountName=NGUYEN%20THANH%20TRUNG" alt="QR Thanh toán MSB" style="width: 200px; height: auto; display: block; margin: 0 auto 14px; border-radius: 8px; background: #fff; padding: 8px;">
-          <div style="display: flex; flex-direction: column; gap: 6px; text-align: left; max-width: 300px; margin: 0 auto;">
+          <div data-bank-info style="display: flex; flex-direction: column; gap: 6px; text-align: left; max-width: 300px; margin: 0 auto;">
             <div style="display: flex; justify-content: space-between; font-size: 13px;"><span style="color: #7C879C;">Ngân hàng</span><span style="font-weight: 700; color: #fff;">MSB (Maritime Bank)</span></div>
             <div style="display: flex; justify-content: space-between; font-size: 13px;"><span style="color: #7C879C;">Số tài khoản</span><span style="font-weight: 700; color: #fff;">03001017825423</span></div>
             <div style="display: flex; justify-content: space-between; font-size: 13px;"><span style="color: #7C879C;">Chủ TK</span><span style="font-weight: 700; color: #fff;">NGUYEN THANH TRUNG</span></div>
@@ -290,7 +507,7 @@
       </div>
 
       <!-- FORM -->
-      <div id="dang-ky" style="background: #fff; border-radius: 20px; padding: 36px; box-shadow: 0 24px 60px rgba(0,0,0,.3);">
+      <div id="dang-ky" data-form style="background: #fff; border-radius: 20px; padding: 36px; box-shadow: 0 24px 60px rgba(0,0,0,.3);">
         <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
           <div style="font-size: 24px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 6px;">Đăng ký giữ chỗ</div>
           <div style="font-size: 14px; color: #77808F; margin-bottom: 26px;">Điền thông tin — chúng tôi sẽ liên hệ xác nhận trong 24h.</div>
@@ -342,7 +559,7 @@
   </div>
 
   <!-- ============ FAQ ============ -->
-  <div style="max-width: 760px; margin: 0 auto; padding: 80px 24px;">
+  <div data-faq style="max-width: 760px; margin: 0 auto; padding: 80px 24px;">
     <div style="font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1E5FC9; margin-bottom: 12px; text-align: center;">Câu hỏi thường gặp</div>
     <h2 style="margin: 0 0 36px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; text-align: center;">Bạn còn băn khoăn?</h2>
     <div style="display: flex; flex-direction: column; gap: 12px;">
@@ -362,7 +579,7 @@
 
   <!-- ============ FOOTER ============ -->
   <div style="border-top: 1px solid #E8E7E0; background: #F1F3EE;">
-    <div style="max-width: 1100px; margin: 0 auto; padding: 32px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
+    <div data-footer style="max-width: 1100px; margin: 0 auto; padding: 32px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <div style="width: 28px; height: 28px; border-radius: 8px; background: #17233A; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px;">A</div>
         <div style="font-size: 14px; font-weight: 600; color: #4B5568;">AI Affiliate · ClickAI.vn</div>
