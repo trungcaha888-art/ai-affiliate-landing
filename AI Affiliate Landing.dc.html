@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1961041421163688');
+fbq('track', 'PageView');
+fbq('track', 'ViewContent', {content_name:'AI Affiliate Landing',content_category:'online_course',value:990000,currency:'VND'});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1961041421163688&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel Code -->
 <script src="./support.js"></script>
 </head>
 <body>
@@ -548,6 +560,7 @@
                 <div style="display: flex; justify-content: space-between; font-size: 14px;"><span style="color: #77808F;">Số tiền</span><span style="font-weight: 700; color: #0E7C4A;">990.000 VND</span></div>
               </div>
               <div style="margin-top: 12px; padding: 10px 14px; background: #EAF1FC; border-radius: 8px; font-size: 13px; color: #1E5FC9; font-weight: 600;">Nội dung CK: AI AFFILIATE {{ formName }} {{ formPhone }}</div>
+              <a href="thank-you.html" style="display: block; margin-top: 14px; padding: 13px 16px; border-radius: 10px; background: #0E7C4A; color: #fff; font-size: 14px; font-weight: 800; text-align: center; text-decoration: none;">Tôi đã chuyển khoản — xem bước xác nhận</a>
             </div>
             <div style="margin-top: 16px; padding: 14px 18px; background: #FFF8E7; border: 1px solid #F0D88A; border-radius: 10px; font-size: 13px; color: #8B6914; line-height: 1.6; text-align: center;">
               Sau khi chuyển khoản, vui lòng <span style="font-weight: 700;">chụp bill</span> gửi qua Zalo — chúng tôi sẽ liên hệ xác nhận suất học trong 24h.
@@ -695,8 +708,19 @@ class Component extends DCLogic {
           return;
         }
         this.setState({ formError: '', submitted: true });
-        // Push data to Google Sheet (giống sieu-tro-ly-ver2)
         const params = new URLSearchParams(window.location.search);
+        const eventId = 'ai_affiliate_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {content_name:'AI Affiliate Landing Form',content_category:'online_course',value:990000,currency:'VND'}, {eventID:eventId + '_lead'});
+          fbq('track', 'InitiateCheckout', {content_name:'AI Affiliate Course',content_ids:['ai-affiliate-course'],content_type:'product',value:990000,currency:'VND',num_items:1}, {eventID:eventId + '_checkout'});
+        }
+        try {
+          sessionStorage.setItem('aiaff_name', formName.trim());
+          sessionStorage.setItem('aiaff_phone', formPhone.trim());
+          sessionStorage.setItem('aiaff_email', formEmail.trim());
+          sessionStorage.setItem('aiaff_event_id', eventId);
+        } catch (e) {}
+        // Push data to Google Sheet (giống sieu-tro-ly-ver2)
         const payload = {
           name: formName.trim(),
           email: formEmail.trim(),
